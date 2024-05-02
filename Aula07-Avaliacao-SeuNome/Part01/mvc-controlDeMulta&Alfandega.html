@@ -1,0 +1,86 @@
+<!--Aqui vai ter uma imagem pelo CSS-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Aqui é o meu css -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- O meu segundo css -->
+    <link rel="stylesheet" href="mq-estilo.css">
+    <link rel="shortcut icon" href="opsz24.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <title>MVC-Controle De Multa</title>
+
+</head>
+
+<body>
+    <main>
+        <!-- Aqui começa a seção de login -->
+        <section id="login">
+            <div id="imagem">
+                <!-- A imagem será adicionada via CSS -->
+
+
+                <!-- Aqui vai ter uma imagem pelo CSS // 
+                Criar uma pagina com sistema ou controle de Multa//
+                Controle de Alfandega = BRASIL não é Estrangeiro// -->
+            </div>
+            <div id="formulario">
+                <h1><h1>Bem-Vindo ao Controle  Alfândega</h1>
+            </h1>
+                <!-- Descrição do formulário -->
+                <p>Seja muito Bem-Vindo à Alfândega! Estamos aqui para ajudá-lo com suas necessidades de importação e exportação.</p>
+
+                <!-- Campo para inserir a velocidade do veículo -->
+
+
+                <label for="fnome">Por favor insira o seu Nome(a):</label><br>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome"><br>
+                <label for="nacionalidade">Sua Nacionalidade:</label><br>
+                <select id="nacionalidade">
+                    <option value="br">Brasileiro</option>
+                    <option value="us">Americano</option>
+                    <option value="fr">Francês</option>
+                    <option value="de">Alemão</option>
+                    <option value="it">Italiano</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select><br>
+               
+
+                <!-- Botão para verificar a velocidade -->
+                <input type="button" value="Enviar" onclick="calcular()">
+                <!-- Aqui será exibida a resposta -->
+                <div id="resp"> </div>
+
+                <script>
+                    // Função para calcular se a velocidade é excessiva
+                    function calcular() {
+                        // Obtém o elemento de entrada de velocidade
+                        var txtname = window.document.querySelector('input#txtname')
+                        var txtnac = window.document.querySelector('input#txtnac')
+                        // Obtém o valor de velocidade inserido e converte para número
+                        var name = Text(txtvel.value)
+                        var placa = String(txtplaca.value)
+                        // Obtém o elemento onde a resposta será exibida
+                        var resp = window.document.querySelector('div#resp')
+
+                        // Verifica se a velocidade é maior que 60 Km/h
+                        //resp.innerHTML = `<p>A velocidade do veiculo é de ${vel} Km/h</p>`
+
+                        if (vel > 60) {
+                            // Exibe a mensagem de multa por excesso de velocidade
+                            resp.innerHTML += `<p> Meu amigo você foi multado, Infelizmente você vai receber uma multa de R$ 130,16 até R$195,23 ${name}</p>`
+                        } else {
+                            // Exibe a mensagem de velocidade dentro do limite
+                            resp.innerHTML += `<p> Meus parabéns você está dentro do limete de velocidade, Nunca se esqueça de usar cinto de segurança ${name}</p>`
+                        }
+                    }
+                </script>
+        </section>
+    </main>
+</body>
+
+</html>

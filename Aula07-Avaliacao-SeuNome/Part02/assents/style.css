@@ -1,0 +1,213 @@
+/* Reset básico: define as configurações padrão para todos os elementos */
+
+/* Configuração do charset UTF-8 */
+@charset "UTF-8";
+
+/* Media queries para diferentes tamanhos de tela */
+
+/* Para telas entre 768px e 992px */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /* Estilos para o body e elementos dentro da seção de login */
+    body {
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+
+    section#login {
+        width: 80vw;
+        height: 280px;
+    }
+
+    section#login>div#imagem {
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    section#login>div#formulario {
+        float: right;
+        width: 70%;
+    }
+}
+
+/* Para telas maiores ou iguais a 992px */
+@media screen and (min-width: 992px) {
+    /* Estilos para o body e elementos dentro da seção de login */
+    body {
+        background-image: linear-gradient(to top, #366d7a, #10197add);
+    }
+
+    section#login {
+        width: 950px;
+        height: 350px;
+    }
+
+    section#login>div#imagem {
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login>div#formulario {
+        float: left;
+        width: 50%;
+    }
+
+    div#formulario>h1 {
+        font-size: 2.0em;
+    }
+
+    div#formulario>p {
+        font-size: 1.2em;
+        margin: 10px 0px;
+    }
+}
+
+/* Estilos para reset básico da página */
+
+/* Define fonte, padding, margin e box-sizing */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Estilos para o body e html */
+body,
+html {
+    background-color: #5f2c82;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Estilos para o main */
+main {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Estilos para a seção de login */
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(255, 240, 245);
+    width: 250px;
+    height: 515px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px grey;
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+}
+
+/* Estilos para a imagem dentro da seção de login */
+section#login>div#imagem {
+    display: block;
+    background: #5f2c82 url(patternsbg.jpg) no-repeat;
+    background-size: cover;
+    background-position: left top;
+    height: 200px;
+}
+
+/* Estilos para o formulário dentro da seção de login */
+section#login>div#formulario {
+    display: block;
+    padding: 5px;
+}
+
+/* Estilos para o título do formulário */
+div#formulario>h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilos para parágrafos dentro do formulário */
+div#formulario>p {
+    font-size: 0.8em;
+}
+
+/* Estilos para os inputs dentro do formulário */
+form>input {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #49a09d;
+    color: aliceblue;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* Estilos para os campos do formulário */
+form>div.campo {
+    background-color: #5f2c82;
+    display: block;
+    width: 99%;
+    height: 40px;
+    border-radius: 7px;
+    margin: 5px 0px;
+}
+
+/* Estilos para labels dentro dos campos do formulário */
+div.campo>label {
+    display: none;
+}
+
+/* Estilos para spans dentro dos campos do formulário */
+div.campo>span {
+    color: aliceblue;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+/* Estilos para inputs dentro dos campos do formulário */
+div.campo>input {
+    background-color: #49a09d;
+    font-size: 1em;
+    width: calc(99% - 43px);
+    height: 90%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12px);
+}
+
+/* Estilos quando um input está focado dentro do campo do formulário */
+div.campo>input:focus-within {
+    background-color: aliceblue;
+}
+
+/* Estilos para botões do formulário */
+form>input[input=submit]:hover {
+    background-color: #25504f;
+}
+
+/* Estilos para links botões do formulário */
+form>a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    color: #25504f;
+    border: 1px solid #49a09d;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+/* Estilos quando um link botão do formulário é passado por cima */
+form>a.botao:hover {
+    background-color: #49a09d;
+}
+
+/* Estilos para spans dentro dos links botões do formulário */
+form>a.botao>span {
+    font-size: 0.8em;
+}
