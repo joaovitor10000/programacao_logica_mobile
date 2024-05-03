@@ -33,7 +33,7 @@
 @media screen and (min-width: 992px) {
     /* Estilos para o body e elementos dentro da seção de login */
     body {
-        background-image: linear-gradient(to top, #366d7a, #10197add);
+        background-image: linear-gradient(to top, #366d7a, #333b97dd);
     }
 
     section#login {
@@ -75,7 +75,7 @@
 /* Estilos para o body e html */
 body,
 html {
-    background-color: #5f2c82;
+    background-color: #11495a;
     height: 100vh;
     width: 100vw;
 }
@@ -105,7 +105,7 @@ section#login {
 /* Estilos para a imagem dentro da seção de login */
 section#login>div#imagem {
     display: block;
-    background: #5f2c82 url(patternsbg.jpg) no-repeat;
+    background: #1c42ff url(patternsbg.jpg) no-repeat;
     background-size: cover;
     background-position: left top;
     height: 200px;
@@ -143,7 +143,7 @@ form>input {
 
 /* Estilos para os campos do formulário */
 form>div.campo {
-    background-color: #5f2c82;
+    background-color:#1c42ff ;
     display: block;
     width: 99%;
     height: 40px;
