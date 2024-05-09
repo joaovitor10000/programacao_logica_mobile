@@ -13,7 +13,7 @@ sendo que a borda faça parte da pagina*/
 sendo que a borda faça parte da pagina*/
 body,
 html {
-    background-color: #FF7f00;
+    background-image: linear-gradient(to top,#f1f1f1 ,#FF7f00,#593493);
     height: 100vh;
     width: 100vw;
 }
@@ -29,7 +29,8 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: rgb(255, 240, 245);
+
+    background-color: aliceblue;
     width: 250px;
     height: 515px;
     border-radius: 20px;
@@ -44,7 +45,7 @@ section#login {
 /*carregar uma imagem em firt mobile para ter tanto o fundo como a posição da imagem*/
 section#login>div#imagem {
     display: block;
-    background: #5f2c82 url(patarr.jpg) no-repeat;
+    background: #5f2c82 url(banco.jpg) no-repeat;
     background-size: cover;
     background-position: left top;
     height: 200px;
@@ -103,7 +104,7 @@ div.campo>span {
 }
 
 div.campo>input {
-    background-color: #287c79;
+    background-color: #49a09d;
     font-size: 1em;
     width: calc(99% - 43px);
     height: 90%;
@@ -120,6 +121,7 @@ div.campo>input:focus-within {
 form>input[input=submit]:hover {
 
     background-color: #25504f;
+
 }
 
 form>a.botao {
@@ -144,13 +146,18 @@ form>a.botao:hover {
 form>a.botao>span {
     font-size: 0.8em;
 }
-/**/
+/*configuração básicas, fazendo o reset da pagina
+sendo que a borda faça parte da pagina*/
+
+
+
 /*configuração básicas, fazendo o reset da pagina
 sendo que a borda faça parte da pagina*/
 @media screen and (min-width: 768px) and (max-width: 992px) {
 
     body {
-        background-image: linear-gradient(to top,#844CA3 ,#844CA3 );
+        background-image: linear-gradient(to top, #593493 ,#f1f1f1 , #FF7f00);
+        
     }
 
     section#login {
@@ -172,7 +179,7 @@ sendo que a borda faça parte da pagina*/
 
 @media screen and (min-width: 992px) {
     body {
-        background-image: linear-gradient(to top, #593493, #593493);
+        background-image: linear-gradient(to top,#FF7f00 ,#f1f1f1, #593493 )
     }
 
     section#login {
@@ -203,6 +210,7 @@ sendo que a borda faça parte da pagina*/
     }
 }
 
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
 body {
     background-color: #ff7f00;
@@ -214,5 +222,3 @@ body {
             background-color: grey;
         }
      }
-
-
