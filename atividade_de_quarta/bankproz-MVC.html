@@ -8,57 +8,74 @@
 </head>
 
 <body>
+  <!-- Título principal da página -->
   <h1>Banking Proz System</h1>
+  <!-- Parágrafo para exibir o saldo atual -->
   <p>Saldo Atual: <span id="balance">R$0.00</span></p>
 
+  <!-- Label e dropdown para seleção do tipo de transação -->
   <label>Selecione o tipo de Serviço:</label>
-
   <select id="transactionType">
+    <!-- Opções para depósito, saque e verificação de saldo -->
     <option value="deposit">Depósito</option>
     <option value="withdraw">Saque de Conta</option>
     <option value="checkBalance">Saldo em Conta</option>
   </select>
 
+  <!-- Botão para acionar a função de processamento da transação -->
   <button onclick="processTransaction()">Escolhido</button>
 
   <script>
+    // Variável para armazenar o saldo
     var balance = 0;
 
+    // Função para processar a transação selecionada
     function processTransaction() {
+      // Obtendo o tipo de transação selecionada
       var type = document.getElementById("transactionType").value;
       var amount = 0;
 
+      // Verificando se o tipo de transação é depósito ou saque
       if (type === "deposit" || type === "withdraw") {
+        // Solicitando ao usuário o valor da transação
         amount = parseFloat(prompt("Insira o valor da transação:"));
+        // Verificando se o valor inserido é numérico
         if (isNaN(amount)) {
           alert("Por favor, insira um valor numérico válido.");
           return;
         }
 
-        //function deposit() {
+        // Definindo as funções para depósito, saque e verificação de saldo
         function deposit() {
-
+          // Solicitando ao usuário o valor a ser depositado
           var amount = prompt("Faça um Depósito na sua Conta:");
+          // Adicionando o valor ao saldo
           balance += parseFloat(amount);
+          // Atualizando o saldo exibido na página
           updateBalance();
         }
 
         function withdraw() {
+          // Solicitando ao usuário o valor a ser retirado
           var amount = prompt("Quanto quer retirar da sua Conta:");
+          // Subtraindo o valor do saldo
           balance -= parseFloat(amount);
+          // Atualizando o saldo exibido na página
           updateBalance();
         }
 
         function checkBalance() {
+          // Exibindo o saldo atual em um alerta
           alert("Your current balance is: $" + balance.toFixed(2));
         }
 
         function updateBalance() {
+          // Atualizando o saldo exibido na página
           document.getElementById("balance").innerHTML = "$" + balance.toFixed(2);
         }
-
-
       }
+
+      // Executando a função correspondente ao tipo de transação selecionada
       switch (type) {
         case "deposit":
           deposit(amount);
